@@ -1,5 +1,5 @@
 The purpose of the project is to identitfy the 3d coordinates of small test image to the large reference 3d reconstructed cloud point.
-
+![[procedure](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/Untitled%20Diagram.jpg)
 1. VisualSFM and SiftGPU are implemented to run sfm with bundle adjustment to recover sparse cloud point, then CMVS method is used to 
 generate dense cloud point (onlly useful for 3d visualization)
 The sparse cloud point data is shown in the file bundle.rd.out, but I seperate it into two parts
@@ -57,7 +57,7 @@ Visualize the dense 3d reconstruction:
 ![Dense_Re](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/dense_reconstruction.JPG)
 All blue points mean camera position
 
-3.
+3. 
 
 
 
