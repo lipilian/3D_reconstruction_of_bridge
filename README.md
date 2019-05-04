@@ -59,10 +59,28 @@ All blue points mean camera position
 
 The test image used is:
 ![test2](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/test2.jpg)
+
 3. FLANN matching implemented between test image and each reference image with distance filter 0.7.
 The matching score are calculated based on the number of matching points, only top 5 matching score reference images are chosen 
 to run following part.
 ![matching_score](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/matching_score_for_100_image.png)
+
+4. Remove the 2d outliers from top 5 reference image by calculating mean and std of 2d distance and only using point whose distance is within 1 std. Visualize the matching result.
+![matching_result](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/Figure_0.png)
+
+5. Run region crop to top 5 reference image:
+![region](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/Figure_0-1.png)
+
+6. Load projection matrix for those 5 images.
+
+7. Run sift detection and FLANN matching amoung those 5 images to match the feature.
+
+8. Use triangulation method to 3d reconstruct the matching point amount 5 images and apply outlier filter again to filter out the 
+outlier from 3d points.
+
+9. Compute mean and std to decide the 3d cube location and width, finall visualize them with dense reconstruction
+![final](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/final_more.JPG)
+The red cube indicate the location of test image.
 
 
 
