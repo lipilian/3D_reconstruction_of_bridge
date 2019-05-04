@@ -57,7 +57,13 @@ Visualize the dense 3d reconstruction:
 ![Dense_Re](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/dense_reconstruction.JPG)
 All blue points mean camera position
 
-3. 
+The test image used is:
+![test2](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/test2.jpg)
+3. FLANN matching implemented between test image and each reference image with distance filter 0.7.
+The matching score are calculated based on the number of matching points, only top 5 matching score reference images are chosen 
+to run following part.
+![matching_score](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/matching_score_for_100_image.png)
+
 
 
 
