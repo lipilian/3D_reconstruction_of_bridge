@@ -50,7 +50,7 @@ Otherwise you can use do CMVS dense reconstruction by using VisualSFM
 
 2. The main file is draw_on_3d_.py. First it calls the test image and run opencv sift detection for all reference image.
 Visualize the camera location and oriantation:
-![Image of Yaktocat](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/camera.JPG)
+![Camera](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/camera.JPG)
 
 
 
