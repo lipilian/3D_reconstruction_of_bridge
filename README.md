@@ -51,7 +51,13 @@ Otherwise you can use do CMVS dense reconstruction by using VisualSFM
 2. The main file is draw_on_3d_.py. First it calls the test image and run opencv sift detection for all reference image.
 Visualize the camera location and oriantation:
 ![Camera](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/camera.JPG)
+Visualize the sparse 3d reconstrution:
+![Sparse_re](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/sparse_reconstruction.JPG)
+Visualize the dense 3d reconstruction:
+![Dense_Re](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/dense_reconstruction.JPG)
+All blue points mean camera position
 
+3.
 
 
 
