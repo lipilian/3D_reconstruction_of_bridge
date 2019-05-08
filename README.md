@@ -60,7 +60,17 @@ All blue points mean camera position
 The test image used is:
 ![test2](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/test2.jpg)
 
-3. FLANN matching implemented between test image and each reference image with distance filter 0.7.
+3. In order to imporve Keypoint matching efficiency, it is a good idea to reduce the reference image as much as possible.
+Region of Interest (ROI) is processed to calculate the bounding box of the bridge by using bothe CNN based segmentation and conventional methods of detection. 
+CNN-based approach used 15 images as 10 for training and 5 for testing. VGGNet is adjusted only with fully connected layers at the end
+with convolutional layers and added a softmax layer to obtain probability maps for the background and the bridge.
+The network was trained for 200 iterations with a batch size of 16 using SGD of learning rate 0.0001 and momentum 0.9
+ROI:
+![ROI cropping](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/ROI.png)
+Line detection:
+![Line_detection](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/line.png)
+
+FLANN matching implemented between test image and each reference image with distance filter 0.7.
 The matching score are calculated based on the number of matching points, only top 5 matching score reference images are chosen 
 to run following part.
 ![matching_score](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/test2/matching_score_for_100_image.png)
