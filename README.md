@@ -65,10 +65,15 @@ Region of Interest (ROI) is processed to calculate the bounding box of the bridg
 CNN-based approach used 15 images as 10 for training and 5 for testing. VGGNet is adjusted only with fully connected layers at the end
 with convolutional layers and added a softmax layer to obtain probability maps for the background and the bridge.
 The network was trained for 200 iterations with a batch size of 16 using SGD of learning rate 0.0001 and momentum 0.9
+
 ROI:
 ![ROI cropping](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/ROI.png)
+
 Line detection:
 ![Line_detection](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/line.png)
+
+CNN:
+![CNN](https://github.com/lipilian/3D_reconstruction_of_bridge/blob/master/result/cnn.PNG)
 
 FLANN matching implemented between test image and each reference image with distance filter 0.7.
 The matching score are calculated based on the number of matching points, only top 5 matching score reference images are chosen 
